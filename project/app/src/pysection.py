@@ -57,7 +57,7 @@ def bisection(request):
             roots_founded.add(round((a_ + b_)/2, 4))
 
         if not roots_founded:
-            result_str = "No existen raices para esta ecuación"
+            result_str = "No existen raíces para esta ecuación"
         else:
             for r in sorted(roots_founded):
 
