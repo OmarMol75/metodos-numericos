@@ -5,7 +5,13 @@
 {% endblock %}
 
 {% block content %}
-<form action="" method="POST">
+<form action="{% url 'calculateRoot' %}" method="POST">
+    {% csrf_token %}
     <input type="text" name="function" placeholder="Ingrese una funcion">
+    <button type="submit">Enviar</button>
 </form>
+
+{% if root %}
+    <h1>{{ root }}</h1>
+{% endif %}
 {% endblock %}
